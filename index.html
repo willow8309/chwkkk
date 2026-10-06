@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--
+W6 Sample 07: Two Images Together
+이번 단계: 03번의 figure를 두 개 넣고 나란히 배치합니다. 이번 단계는 그림 배치에 집중합니다.
+사용법: 전체 복사 → 새 메모장 → assets 폴더 옆에 index.html로 저장.
+코드를 외우기보다, 브라우저가 무엇을 하도록 할지 생각하세요.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Two Images Together</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 20px;
+      line-height: 1.6;
+    }
+    button, select {
+      font-size: 18px;
+      padding: 10px 14px;
+      margin-top: 10px;
+      max-width: 100%;
+    }
+    button { cursor: pointer; }
+    img { display: block; width: 100%; height: auto; border-radius: 12px; }
+    figure { margin: 16px 0; }
+    audio { width: 100%; margin-top: 12px; }
+    button:focus-visible { outline: 3px solid #1463ab; outline-offset: 4px; }
+    .note { color: #465363; font-size: 15px; }
+    .pictures { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .pictures figure { min-width: 0; }
+  </style>
+</head>
+<body>
+  <h1>Two Images Together</h1>
+  <p>Look at both places. Which place would you like to visit?</p>
+  <!-- [추가] 두 figure를 한 묶음으로 만들어 두 열에 배치합니다. -->
+  <div class="pictures">
+  <figure>
+    <!-- [추가] src는 그림 파일의 위치, alt는 그림의 대체 설명입니다. -->
+    <img src="assets/images/picture_01.png" alt="A quiet park with trees, a bench and a winding path.">
+    <figcaption>A quiet park.</figcaption>
+  </figure>
+  <figure>
+    <!-- [추가] 두 번째 그림도 같은 assets 폴더에서 불러옵니다. -->
+    <img src="assets/images/picture_02.png" alt="A small cafe with an awning and an outdoor table.">
+    <figcaption>A neighborhood cafe.</figcaption>
+  </figure>
+  </div>
+</body>
+</html>
